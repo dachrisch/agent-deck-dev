@@ -4,9 +4,9 @@
 - [x] Task: Create E2E test directory in Dev Project (5b558b2)
     - [x] Create `tests/e2e` directory
     - [x] Initialize a Go module in `tests/e2e` (since tui-test is a Go library)
-- [ ] Task: Integrate `microsoft/tui-test` dependency
-    - [ ] Add `github.com/microsoft/tui-test` to the new go module
-- [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
+- [x] Task: Integrate `microsoft/tui-test` dependency (1f81d99)
+    - [x] Add `github.com/microsoft/tui-test` to the new go module
+- [~] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: Build & Environment Utilities
 - [ ] Task: Create a local build utility for the submodule
