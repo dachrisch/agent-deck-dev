@@ -1,11 +1,11 @@
 # Implementation Plan: E2E Test for Gemini Model Switching
 
-## Phase 1: Test Infrastructure & Mocking
+## Phase 1: Test Infrastructure & Mocking [checkpoint: a57c96b]
 - [x] Task: Implement Gemini API Mocking for tests (f72ec90)
     - [x] Add support for local model listing overrides in `internal/session/gemini.go` if necessary
 - [x] Task: Create `tests/e2e/model_switch_test.go` scaffolding (f6efea6)
     - [x] Setup temporary home and profile for the test
-- [~] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: Test Automation Logic
 - [ ] Task: Automate Gemini Session Creation & Model Dialog
