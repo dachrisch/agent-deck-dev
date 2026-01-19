@@ -1,4 +1,4 @@
-# Track e2e_testing_20260119 Context
+# Track gemini_models_20260119 Context
 
 - [Specification](./spec.md)
 - [Implementation Plan](./plan.md)
