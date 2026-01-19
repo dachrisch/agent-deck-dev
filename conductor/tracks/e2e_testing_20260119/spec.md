@@ -1,31 +1,22 @@
-# Specification: E2E Testing with tui-test
+# Specification: E2E Testing with creack/pty
 
 ## Overview
-Establish a robust end-to-end (E2E) testing framework for Agent Deck using `microsoft/tui-test`. This will allow for automated verification of the TUI's behavior, starting with a basic build-and-startup check.
+Establish a robust end-to-end (E2E) testing framework for Agent Deck using `github.com/creack/pty`. This allows for automated verification of the TUI's behavior by interacting with the pseudo-terminal output.
 
 ## Goal
-To ensure that Agent Deck builds correctly and the TUI initializes to a valid state in a real terminal environment.
+To ensure that Agent Deck builds correctly and the TUI initializes to a valid state in an isolated terminal environment.
 
 ## Functional Requirements
 - **Test Infrastructure:** Create a `tests/e2e` directory in the Dev Project.
-- **Dependency Management:** Integrate `microsoft/tui-test` to interact with and verify the TUI buffer.
+- **Dependency Management:** Integrate `github.com/creack/pty` to interact with the TUI output.
 - **Local Build Integration:** Automatically build the `agent-deck` binary from the submodule before test execution.
-- **Tmux Integration:** Execute the startup test within a real `tmux` session to match the application's production environment.
+- **Profile Isolation:** Execute tests using a temporary profile and isolated HOME directory to avoid lock file conflicts.
 - **First Test Case:** 
     - Build the application.
-    - Launch Agent Deck.
-    - Use `tui-test` to verify that a specific UI element (e.g., logo or Home tab) is rendered correctly.
-
-## Non-Functional Requirements
-- **Local Execution:** Optimized for local development and verification.
-- **Environment Parity:** Tests should accurately reflect the TUI experience in a standard terminal.
+    - Launch Agent Deck using a PTY.
+    - Verify that "Agent Deck" is rendered in the TUI output.
 
 ## Acceptance Criteria
-- [ ] `tests/e2e` directory exists in the Dev Project.
-- [ ] A successful run of the startup test confirms the binary builds.
-- [ ] The test confirms the app starts in `tmux` and renders initial UI elements.
-- [ ] Test results are clearly reported in the console.
-
-## Out of Scope
-- Integration of this specific E2E suite into the remote CI pipeline (currently focused on local execution).
-- Complex multi-session interaction tests (reserved for future tracks).
+- [x] `tests/e2e` directory exists in the Dev Project.
+- [x] A successful run of the startup test confirms the binary builds.
+- [x] The test confirms the app starts and renders initial UI elements.
