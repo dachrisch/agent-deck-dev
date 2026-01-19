@@ -6,7 +6,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: CI Configuration
-- [ ] Task: Create management-ci.yml in root
-- [ ] Task: Configure submodule checkout and test execution
-- [ ] Task: Add test result publishing and artifact upload
-- [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+- [x] Task: Create management-ci.yml in root
+- [x] Task: Configure submodule checkout and test execution
+- [x] Task: Add test result publishing and artifact upload
+- [~] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
