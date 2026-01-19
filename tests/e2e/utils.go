@@ -27,3 +27,27 @@ func BuildBinary() (string, error) {
 
 	return binaryPath, nil
 }
+
+// TmuxSession represents a managed tmux session for testing.
+type TmuxSession struct {
+	Name string
+}
+
+// NewTmuxSession starts a new tmux session with the given name and command.
+func NewTmuxSession(name string, binPath string) (*TmuxSession, error) {
+	// Kill session if it exists
+	_ = exec.Command("tmux", "kill-session", "-t", name).Run()
+
+	// Start new session
+	cmd := exec.Command("tmux", "new-session", "-d", "-s", name, binPath)
+	if err := cmd.Run(); err != nil {
+		return nil, fmt.Errorf("failed to start tmux session: %v", err)
+	}
+
+	return &TmuxSession{Name: name}, nil
+}
+
+// Cleanup kills the tmux session.
+func (s *TmuxSession) Cleanup() {
+	_ = exec.Command("tmux", "kill-session", "-t", s.Name).Run()
+}
