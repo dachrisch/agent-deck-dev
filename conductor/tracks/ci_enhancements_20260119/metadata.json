@@ -1,8 +1,0 @@
-{
-  "track_id": "ci_enhancements_20260119",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-01-19T23:45:00Z",
-  "updated_at": "2026-01-19T23:45:00Z",
-  "description": "Implement automated test result publishing and artifact upload in the CI pipeline."
-}

@@ -1,4 +1,4 @@
-# Track ci_enhancements_20260119 Context
+# Track e2e_testing_20260119 Context
 
 - [Specification](./spec.md)
 - [Implementation Plan](./plan.md)
