@@ -12,6 +12,7 @@
 - **tmux:** Backend for persistent session management, allowing agents to run in the background.
 - **pty (creack/pty):** Go interface for pseudo-terminal allocation and control.
 - **fsnotify:** Cross-platform file system notifications for monitoring session storage and config changes.
+- **Gemini API:** Used for dynamic discovery of available AI models.
 
 ## Data & Configuration
 - **TOML (BurntSushi/toml):** Primary format for user configuration and agent profiles.
