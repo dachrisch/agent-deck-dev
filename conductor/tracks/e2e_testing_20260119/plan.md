@@ -9,11 +9,11 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: Build & Environment Utilities
-- [ ] Task: Create a local build utility for the submodule
-    - [ ] Implement a helper to build the `agent-deck` binary from `./agent-deck/cmd/agent-deck`
-- [ ] Task: Implement Tmux session management for tests
-    - [ ] Create helper to launch and clean up the TUI within a controlled tmux session
-- [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+- [x] Task: Create a local build utility for the submodule (6162a94)
+    - [x] Implement a helper to build the `agent-deck` binary from `./agent-deck/cmd/agent-deck`
+- [x] Task: Implement Tmux session management for tests (70c7f62)
+    - [x] Create helper to launch and clean up the TUI within a controlled tmux session
+- [~] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
 
 ## Phase 3: First E2E Test Development
 - [ ] Task: Implement the "Startup and UI Detection" test
