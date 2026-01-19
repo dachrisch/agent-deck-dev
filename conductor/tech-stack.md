@@ -20,4 +20,5 @@
 
 ## Development & Testing
 - **Testify:** Comprehensive testing toolkit for unit and integration tests.
+- **creack/pty:** Pseudo-terminal interface for TUI verification and E2E testing.
 - **Make:** Used for build orchestration and development workflows.

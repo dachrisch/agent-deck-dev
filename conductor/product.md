@@ -23,6 +23,7 @@ Agent Deck bridges the gap between raw CLI agent tools and the need for a cohesi
 - **Global Search:** Find and navigate through session history and outputs.
 - **Status Monitoring:** Visual indicators for agent activity, sleep states, and task progress.
 - **Automated CI Pipeline:** Management-level GitHub Actions workflow in the Dev Project for continuous testing and quality reporting of the ecosystem.
+- **E2E Test Framework:** Robust testing framework using `creack/pty` for automated TUI verification and startup checks.
 
 ## Success Metrics
 - **Context Switching Reduction:** Decrease in time spent manually managing multiple terminal windows for different agents.
