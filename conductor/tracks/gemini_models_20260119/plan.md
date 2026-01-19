@@ -9,17 +9,17 @@
     - [x] Ensure API calls are cached or handled efficiently to prevent UI lag
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
-## Phase 2: UI Updates (Session List)
-- [ ] Task: Update Session Item Rendering
-    - [ ] Modify `internal/ui/home.go` to extract and display the Gemini model name in the session list
-    - [ ] Apply appropriate Lipgloss styling to the model tag
-- [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+## Phase 2: UI Updates (Session List) [checkpoint: 7154894]
+- [x] Task: Update Session Item Rendering (f6efea6)
+    - [x] Modify `internal/ui/home.go` to extract and display the Gemini model name in the session list
+    - [x] Apply appropriate Lipgloss styling to the model tag
+- [x] Task: Conductor - User Manual Verification 'Phase 2'
 
-## Phase 3: Interactive Management
-- [ ] Task: Update Action Menu
-    - [ ] Add "Change Model" option to the menu in `internal/ui/home.go`
-    - [ ] Implement a selection dialog (fuzzy list) to pick from discovered models
-- [ ] Task: Implement Dynamic Model Switching
-    - [ ] Add logic to communicate the model change to the running Gemini session
-    - [ ] Verify the UI updates immediately after a successful switch
-- [ ] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md)
+## Phase 3: Interactive Management [checkpoint: 03f068a]
+- [x] Task: Update Action Menu (f72ec90)
+    - [x] Add "Change Model" option to the menu in `internal/ui/home.go`
+    - [x] Implement a selection dialog (fuzzy list) to pick from discovered models
+- [x] Task: Implement Dynamic Model Switching (f72ec90)
+    - [x] Add logic to communicate the model change to the running Gemini session
+    - [x] Verify the UI updates immediately after a successful switch
+- [x] Task: Conductor - User Manual Verification 'Phase 3'
