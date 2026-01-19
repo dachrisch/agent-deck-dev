@@ -1,9 +1,9 @@
 # Implementation Plan: Gemini Model Management
 
 ## Phase 1: Submodule Scaffolding & API Integration
-- [ ] Task: Prepare feature branch in agent-deck submodule
-    - [ ] Checkout main in agent-deck
-    - [ ] Create branch `feature/gemini-model-management`
+- [x] Task: Prepare feature branch in agent-deck submodule (3a53115)
+    - [x] Checkout main in agent-deck
+    - [x] Create branch `feature/gemini-model-management`
 - [ ] Task: Implement Gemini Model Discovery
     - [ ] Add logic to fetch available models from the Gemini API within `internal/session/gemini.go`
     - [ ] Ensure API calls are cached or handled efficiently to prevent UI lag
