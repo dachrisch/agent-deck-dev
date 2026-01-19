@@ -1,9 +1,9 @@
 # Specification: CI Enhancements
 
 ## Goal
-Improve visibility into CI failures by automatically publishing test results as PR comments or artifacts.
+Implement CI in the Dev Project to manage and report on the Agent Deck ecosystem.
 
 ## Requirements
-- Integrate a test reporter (e.g., junit report) into the existing GitHub Actions workflow.
-- Upload test coverage and result artifacts.
-- Ensure non-blocking execution of reports.
+- Establish a GitHub Actions workflow in the Dev Project.
+- Checkout the agent-deck submodule during CI.
+- Integrate test reporting and artifact publishing within this management repo.
