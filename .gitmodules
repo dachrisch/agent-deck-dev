@@ -1,0 +1,3 @@
+[submodule "agent-deck"]
+	path = agent-deck
+	url = git@github.com:dachrisch/agent-deck.git
