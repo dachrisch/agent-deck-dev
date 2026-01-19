@@ -1,13 +1,13 @@
 # Implementation Plan: Gemini Model Management
 
-## Phase 1: Submodule Scaffolding & API Integration
+## Phase 1: Submodule Scaffolding & API Integration [checkpoint: 8737891]
 - [x] Task: Prepare feature branch in agent-deck submodule (3a53115)
     - [x] Checkout main in agent-deck
     - [x] Create branch `feature/gemini-model-management`
-- [ ] Task: Implement Gemini Model Discovery
-    - [ ] Add logic to fetch available models from the Gemini API within `internal/session/gemini.go`
-    - [ ] Ensure API calls are cached or handled efficiently to prevent UI lag
-- [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
+- [x] Task: Implement Gemini Model Discovery (f72ec90)
+    - [x] Add logic to fetch available models from the Gemini API within `internal/session/gemini.go`
+    - [x] Ensure API calls are cached or handled efficiently to prevent UI lag
+- [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: UI Updates (Session List)
 - [ ] Task: Update Session Item Rendering
