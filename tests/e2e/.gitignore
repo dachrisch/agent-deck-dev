@@ -1,1 +1,4 @@
 agent-deck-test-bin
+e2e-switch
+e2e-startup
+*.test
