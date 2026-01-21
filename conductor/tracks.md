@@ -18,3 +18,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [x] **Track: Gemini Model Enhancements**
   *Link: [./tracks/gemini_model_enhancements_20260121/](./tracks/gemini_model_enhancements_20260121/)*
+
+---
+
+- [x] **Track: Gemini Model Label Shortening and Dynamic Detection**
+  *Link: [./tracks/gemini_label_shortening_20260122/](./tracks/gemini_label_shortening_20260122/)*
