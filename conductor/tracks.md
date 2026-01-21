@@ -13,3 +13,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [x] **Track: E2E Test for Gemini Model Switching**
   *Link: [./tracks/gemini_e2e_20260119/](./tracks/gemini_e2e_20260119/)*
+
+---
+
+- [ ] **Track: Gemini Model Enhancements**
+  *Link: [./tracks/gemini_model_enhancements_20260121/](./tracks/gemini_model_enhancements_20260121/)*
