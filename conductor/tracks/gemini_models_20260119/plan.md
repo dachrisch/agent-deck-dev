@@ -23,3 +23,12 @@
     - [x] Add logic to communicate the model change to the running Gemini session
     - [x] Verify the UI updates immediately after a successful switch
 - [x] Task: Conductor - User Manual Verification 'Phase 3'
+
+## Phase 4: Upstream Synchronization & Maintenance
+- [x] Task: Sync submodule with upstream
+    - [x] Fetch from upstream in `agent-deck`
+    - [x] Merge `upstream/main` into local `main`
+    - [x] Merge `main` into `feature/gemini-model-management`
+- [x] Task: Verify feature still running
+    - [x] Run E2E tests in `tests/e2e`
+- [x] Task: Conductor - User Manual Verification 'Phase 4'
