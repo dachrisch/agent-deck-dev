@@ -5,9 +5,9 @@
     - [x] Create `internal/session/utils.go` (if not exists) or add to existing utils
     - [x] Implement logic to strip `gemini-` prefix
     - [x] Add unit tests for various model name formats
-- [ ] Task: Update Session List rendering logic
-    - [ ] Modify `internal/ui/home.go` to use `ShortenModelName` when displaying Gemini models
-    - [ ] Implement `auto(detected-model)` display logic for sessions started with "auto"
+- [x] Task: Update Session List rendering logic (ef83595)
+    - [x] Modify `internal/ui/home.go` to use `ShortenModelName` when displaying Gemini models
+    - [x] Implement `auto(detected-model)` display logic for sessions started with "auto"
 - [ ] Task: Verify TUI rendering
     - [ ] Run `agent-deck` and verify Gemini session labels in the list view
 - [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
