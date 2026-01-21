@@ -25,7 +25,7 @@ Agent Deck bridges the gap between raw CLI agent tools and the need for a cohesi
 - **Automated CI Pipeline:** Management-level GitHub Actions workflow in the Dev Project for continuous testing and quality reporting of the ecosystem.
 - **E2E Test Framework:** Robust testing framework using `creack/pty` for automated TUI verification and startup checks.
 - **Advanced E2E Automation:** Automated verification of complex TUI interactions, including session state persistence and dynamic model management.
-- **Gemini Model Management:** Real-time visibility and control over Gemini model selection directly from the TUI, with dynamic switching and backend model change detection.
+- **Advanced Gemini Integration:** Real-time visibility and control over Gemini model selection with dynamic switching, backend model change detection, and enhanced visual feedback for auto-detected models.
 
 ## Success Metrics
 - **Context Switching Reduction:** Decrease in time spent manually managing multiple terminal windows for different agents.
