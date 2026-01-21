@@ -24,6 +24,7 @@ Agent Deck bridges the gap between raw CLI agent tools and the need for a cohesi
 - **Status Monitoring:** Visual indicators for agent activity, sleep states, and task progress.
 - **Automated CI Pipeline:** Management-level GitHub Actions workflow in the Dev Project for continuous testing and quality reporting of the ecosystem.
 - **E2E Test Framework:** Robust testing framework using `creack/pty` for automated TUI verification and startup checks.
+- **Advanced E2E Automation:** Automated verification of complex TUI interactions, including session state persistence and dynamic model management.
 - **Gemini Model Management:** Real-time visibility and control over Gemini model selection directly from the TUI, with dynamic switching support.
 
 ## Success Metrics

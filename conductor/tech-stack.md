@@ -22,4 +22,5 @@
 ## Development & Testing
 - **Testify:** Comprehensive testing toolkit for unit and integration tests.
 - **creack/pty:** Pseudo-terminal interface for TUI verification and E2E testing.
+- **Mock API Infrastructure:** Environment-based mocking for third-party service dependencies in E2E tests.
 - **Make:** Used for build orchestration and development workflows.
