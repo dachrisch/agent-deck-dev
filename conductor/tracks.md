@@ -4,8 +4,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Active Tracks
 
-- [x] **Track: Fix Gemini Status Detection**
-  *Link: [./tracks/gemini_status_fix_20260122/](./tracks/gemini_status_fix_20260122/)*
+(No active tracks. Define next goal.)
 
 ---
 
@@ -16,3 +15,4 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Gemini Model Enhancements** (Archived: 2026-01-22)
 - [x] **Track: Gemini Model Label Shortening and Dynamic Detection** (Archived: 2026-01-22)
 - [x] **Track: Gemini Model Detection and Hardcoded List Update** (Archived: 2026-01-22)
+- [x] **Track: Fix Gemini Status Detection** (Archived: 2026-01-23)
