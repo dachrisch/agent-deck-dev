@@ -7,9 +7,77 @@ import (
 	"path/filepath"
 	"regexp"
 	"runtime"
+	"strings"
+	"testing"
+	"time"
 	"crypto/sha256"
 	"encoding/hex"
 )
+
+// waitForString waits for a string to appear in the output channel.
+func waitForString(t *testing.T, output chan string, target string, timeout time.Duration) {
+	deadline := time.After(timeout)
+	var captured []string
+	for {
+		select {
+		case line := <-output:
+			cleanLine := StripANSI(line)
+			if cleanLine != "" {
+				captured = append(captured, cleanLine)
+				if strings.Contains(strings.ToLower(cleanLine), strings.ToLower(target)) {
+					t.Logf("Found target %q in line: %q", target, cleanLine)
+					return
+				}
+			}
+		case <-deadline:
+			t.Logf("Recent output lines (%d):", len(captured))
+			start := 0
+			if len(captured) > 50 {
+				start = len(captured) - 50
+			}
+			for i := start; i < len(captured); i++ {
+				t.Logf("  %q", captured[i])
+			}
+			t.Fatalf("Timed out waiting for string: %q", target)
+		}
+	}
+}
+
+// waitForLineWith waits for a single line containing all target strings to appear.
+func waitForLineWith(t *testing.T, output chan string, targets []string, timeout time.Duration) {
+	deadline := time.After(timeout)
+	var captured []string
+	for {
+		select {
+		case line := <-output:
+			cleanLine := StripANSI(line)
+			if cleanLine != "" {
+				captured = append(captured, cleanLine)
+				allFound := true
+				for _, target := range targets {
+					if !strings.Contains(strings.ToLower(cleanLine), strings.ToLower(target)) {
+						allFound = false
+						break
+					}
+				}
+				if allFound {
+					t.Logf("Found all targets %v in line: %q", targets, cleanLine)
+					return
+				}
+			}
+		case <-deadline:
+			t.Logf("Recent output lines (%d):", len(captured))
+			start := 0
+			if len(captured) > 50 {
+				start = len(captured) - 50
+			}
+			for i := start; i < len(captured); i++ {
+				t.Logf("  %q", captured[i])
+			}
+			t.Fatalf("Timed out waiting for line containing all targets: %v", targets)
+		}
+	}
+}
 
 // HashProjectPath generates SHA256 hash of absolute project path.
 func HashProjectPath(projectPath string) string {

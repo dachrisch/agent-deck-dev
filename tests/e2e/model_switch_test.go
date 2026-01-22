@@ -432,31 +432,3 @@ func TestGeminiOutputModelDetection(t *testing.T) {
 	
 	t.Log("E2E Output Detection Test Passed!")
 }
-
-func waitForString(t *testing.T, output chan string, target string, timeout time.Duration) {
-	deadline := time.After(timeout)
-	var captured []string
-	for {
-		select {
-		case line := <-output:
-			cleanLine := StripANSI(line)
-			if cleanLine != "" {
-				captured = append(captured, cleanLine)
-				if strings.Contains(strings.ToLower(cleanLine), strings.ToLower(target)) {
-					t.Logf("Found target %q in line: %q", target, cleanLine)
-					return
-				}
-			}
-		case <-deadline:
-			t.Logf("Recent output lines (%d):", len(captured))
-			start := 0
-			if len(captured) > 50 {
-				start = len(captured) - 50
-			}
-			for i := start; i < len(captured); i++ {
-				t.Logf("  %q", captured[i])
-			}
-			t.Fatalf("Timed out waiting for string: %q", target)
-		}
-	}
-}
