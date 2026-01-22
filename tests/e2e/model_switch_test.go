@@ -289,7 +289,7 @@ func TestGeminiAutoModelAndDetection(t *testing.T) {
 		t.Fatalf("Failed to set GEMINI_SESSION_ID in tmux: %v", err)
 	}
 
-	// 5. Verify UI updates from "auto" to "gemini-3-pro-preview"
+	// 5. Verify UI updates from "auto" to "gemini(auto(3-pro-preview))"
 	t.Log("Waiting for dynamic model detection...")
 	waitForString(t, output, "gemini(auto(3-pro-preview))", 30*time.Second)
 	
@@ -424,11 +424,11 @@ func TestGeminiOutputModelDetection(t *testing.T) {
 	// Simpler: kill sleep and start a new command that echoes and then sleeps.
 	exec.Command("tmux", "respawn-pane", "-t", tmuxSessionName, "-k", "echo 'Now using gemini-2.0-flash'; sleep 100").Run()
 
-	// 5. Verify UI updates to gemini(1.5-pro(2.0-flash))
+	// 5. Verify UI updates to gemini(2.0-flash)
 	// Wait, since GeminiModel is gemini-1.5-pro and detected is gemini-2.0-flash
-	// FormatGeminiModelLabel("gemini-1.5-pro", "gemini-2.0-flash") -> "1.5-pro(2.0-flash)"
+	// FormatGeminiModelLabel("gemini-1.5-pro", "gemini-2.0-flash") -> "2.0-flash"
 	t.Log("Waiting for output-based model detection...")
-	waitForString(t, output, "gemini(1.5-pro(2.0-flash))", 30*time.Second)
+	waitForString(t, output, "gemini(2.0-flash)", 30*time.Second)
 	
 	t.Log("E2E Output Detection Test Passed!")
 }

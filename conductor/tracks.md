@@ -23,3 +23,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [x] **Track: Gemini Model Label Shortening and Dynamic Detection**
   *Link: [./tracks/gemini_label_shortening_20260122/](./tracks/gemini_label_shortening_20260122/)*
+
+---
+
+- [~] **Track: Gemini Model Detection and Hardcoded List Update**
+  *Link: [./tracks/gemini_model_update_20260122/](./tracks/gemini_model_update_20260122/)*
