@@ -1,0 +1,8 @@
+{
+  "track_id": "gemini_status_fix_20260122",
+  "type": "bug",
+  "status": "new",
+  "created_at": "2026-01-22T22:55:00Z",
+  "updated_at": "2026-01-22T22:55:00Z",
+  "description": "bug: status for gemini is not showing correctly. its almost always idle. figure out what might be the problem and fix"
+}
