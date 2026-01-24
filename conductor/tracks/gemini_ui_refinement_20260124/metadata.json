@@ -1,0 +1,8 @@
+{
+  "track_id": "gemini_ui_refinement_20260124",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-01-24T12:30:00Z",
+  "updated_at": "2026-01-24T12:30:00Z",
+  "description": "move the model display into the gemini section on the right just below session as a dropdown. restore the previous view in the tree"
+}

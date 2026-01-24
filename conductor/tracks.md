@@ -4,7 +4,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Active Tracks
 
-(No active tracks. Define next goal.)
+- [ ] **Track: move the model display into the gemini section on the right just below session as a dropdown. restore the previous view in the tree**
+*Link: [./tracks/gemini_ui_refinement_20260124/](./tracks/gemini_ui_refinement_20260124/)*
 
 ---
 
