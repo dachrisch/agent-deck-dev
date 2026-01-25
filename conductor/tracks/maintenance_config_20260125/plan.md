@@ -17,11 +17,11 @@ This plan outlines the implementation of user-controlled maintenance settings an
 
 ## Phase 2: TUI Settings & Feedback
 
-- [ ] Task: TDD - Add Settings UI Toggle
+- [x] Task: TDD - Add Settings UI Toggle (3f6997e)
     - [ ] Add "Maintenance" toggle to `internal/ui/settings_panel.go`.
     - [ ] Ensure toggling updates the user configuration and persists to disk.
     - [ ] Write unit tests for the settings panel state change.
-- [ ] Task: TDD - Implement Status Message Logic
+- [x] Task: TDD - Implement Status Message Logic (7e3ad26)
     - [ ] Add `maintenanceMsg` state to `internal/ui/home.go`.
     - [ ] Implement a `clearMaintenanceMsg` timer/command.
     - [ ] Update `renderPreviewPane` (or bottom bar) to display the message when active.
