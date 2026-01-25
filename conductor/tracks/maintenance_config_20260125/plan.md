@@ -28,7 +28,7 @@ This plan outlines the implementation of user-controlled maintenance settings an
     - [ ] Write unit tests for message appearance and auto-clearing.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: TUI Settings & Feedback' (Protocol in workflow.md)
 
-## Phase 3: Final Integration & E2E
+## Phase 3: Final Integration & E2E [checkpoint: 21438c8]
 
 - [x] Task: Final E2E Verification (8376713, 642d59a)
     - [ ] Create an E2E test in `tests/e2e` that enables maintenance, mocks a run, and verifies the UI message appears.
