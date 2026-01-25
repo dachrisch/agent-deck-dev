@@ -2,9 +2,9 @@
 
 This plan outlines the steps to refactor the Gemini session management logic and consolidate utility functions.
 
-## Phase 1: Utility Consolidation
+## Phase 1: Utility Consolidation [checkpoint: df6bade]
 
-- [ ] Task: TDD - Consolidate findNewestFile
+- [x] Task: TDD - Consolidate findNewestFile
     - [ ] Create `internal/session/utils_test.go` with tests for `findNewestFile`.
     - [ ] Create `internal/session/utils.go` and implement `findNewestFile`.
     - [ ] Update `internal/session/gemini.go` to remove duplicate implementations.
