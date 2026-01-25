@@ -26,8 +26,10 @@ Agent Deck bridges the gap between raw CLI agent tools and the need for a cohesi
 - **E2E Test Framework:** Robust testing framework using `creack/pty` for automated TUI verification and startup checks.
 - **Advanced E2E Automation:** Automated verification of complex TUI interactions, including session state persistence and dynamic model management.
 - **Advanced Gemini Integration:** Real-time visibility and control over Gemini model selection with dynamic switching, backend model change detection, and enhanced visual feedback for auto-detected models.
+- **Automated Maintenance:** User-configurable background tasks for log pruning and session archiving with real-time TUI feedback.
 
 ## Success Metrics
 - **Context Switching Reduction:** Decrease in time spent manually managing multiple terminal windows for different agents.
 - **Resource Efficiency:** Reduced CPU/Memory footprint through intelligent MCP pooling.
+- **Storage Optimization:** Automated cleanup of stale logs and bloated session data to prevent disk bloat.
 - **Session Persistence:** High reliability in recovering and continuing long-running agent tasks.
