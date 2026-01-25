@@ -7,6 +7,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [ ] **Track: refactor UpdateGeminiSession and consolidate findNewestFile into utils.go**
 *Link: [./tracks/gemini_refactoring_20260125/](./tracks/gemini_refactoring_20260125/)*
 
+- [ ] **Track: implement automated Gemini log pruning and session archiving**
+*Link: [./tracks/maintenance_cleanup_20260125/](./tracks/maintenance_cleanup_20260125/)*
+
 ---
 
 ## Archived Tracks
