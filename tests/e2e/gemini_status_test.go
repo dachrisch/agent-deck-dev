@@ -138,14 +138,14 @@ func TestGeminiStatusDetection(t *testing.T) {
 
 	// 5. Verify UI shows "Running" (●)
 	t.Log("Waiting for 'Running' status (●)...")
-	// The output will contain "●" and "gemini(auto)" in the same line
+	// The output will contain "●" and "gemini" in the same line
 	waitForString(t, output, "●", 15*time.Second)
 	// Actually, let's wait for the specific pattern in one line
-	// Note: there's ANSI codes between ● and gemini(auto)
+	// Note: there's ANSI codes between ● and gemini
 	waitForString(t, output, "●", 10*time.Second)
 	
 	// Better: create a composite waitForString that checks for multiple substrings in one line
-	waitForLineWith(t, output, []string{"●", "gemini(auto)"}, 15*time.Second)
+	waitForLineWith(t, output, []string{"●", "gemini"}, 15*time.Second)
 	
 	// 6. Simulate Idle
 	t.Log("Simulating Gemini idle (prompt)...")
@@ -157,7 +157,7 @@ func TestGeminiStatusDetection(t *testing.T) {
 	// 7. Verify UI returns to Idle/Waiting
 	t.Log("Waiting for 'Idle/Waiting' status (◐)...")
 	// It should be ◐ (Waiting) because we are not attached
-	waitForLineWith(t, output, []string{"◐", "gemini(auto)"}, 15*time.Second)
+	waitForLineWith(t, output, []string{"◐", "gemini"}, 15*time.Second)
 
 	t.Log("E2E Status Detection Test Passed!")
 }

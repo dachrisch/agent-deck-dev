@@ -56,6 +56,7 @@ func TestGeminiModelSwitch(t *testing.T) {
 				"status":       "idle",
 				"created_at":   time.Now(),
 				"tmux_session": tmuxSessionName,
+				"gemini_session_id": sessionID,
 			},
 		},
 		"groups": []map[string]interface{}{
@@ -138,9 +139,11 @@ func TestGeminiModelSwitch(t *testing.T) {
 	f.Write([]byte("\r"))
 	time.Sleep(1 * time.Second)
 
-	// 5. Verify UI reflects the change in the list
-	t.Log("Verifying UI model tag update...")
-	waitForString(t, output, "gemini(1.5-flash)", 30*time.Second)
+	// 5. Verify UI reflects the change
+	// Tree view should still just say 'gemini'
+	waitForString(t, output, "gemini", 10*time.Second)
+	// Right panel should now show the selected model (full name with prefix)
+	waitForString(t, output, "gemini-1.5-flash", 30*time.Second)
 	
 	t.Log("E2E Test Passed!")
 }
@@ -189,6 +192,7 @@ func TestGeminiAutoModelAndDetection(t *testing.T) {
 				"status":       "idle",
 				"created_at":   time.Now(),
 				"tmux_session": tmuxSessionName,
+				"gemini_session_id": sessionID,
 				"gemini_model": "auto", // Set to auto
 			},
 		},
@@ -251,9 +255,11 @@ func TestGeminiAutoModelAndDetection(t *testing.T) {
 	f.Write([]byte("j")) // Move down from Group to Session
 	time.Sleep(1 * time.Second)
 
-	// 3. Verify UI shows "auto" initially
-	t.Log("Verifying initial 'auto' tag...")
-	waitForString(t, output, "gemini(auto)", 20*time.Second)
+	// 3. Verify UI shows "gemini" initially
+	t.Log("Verifying initial 'gemini' label...")
+	waitForString(t, output, "gemini", 20*time.Second)
+	// Right panel should show "auto"
+	waitForString(t, output, "auto", 10*time.Second)
 
 	// 3. Simulate Gemini creating a session file with a detected model
 	// We need to match the hash of tmpDir
@@ -288,9 +294,10 @@ func TestGeminiAutoModelAndDetection(t *testing.T) {
 		t.Fatalf("Failed to set GEMINI_SESSION_ID in tmux: %v", err)
 	}
 
-	// 5. Verify UI updates from "auto" to "gemini(auto(3-pro-preview))"
+	// 5. Verify UI updates right panel from "auto" to "auto (gemini-3-pro-preview)"
 	t.Log("Waiting for dynamic model detection...")
-	waitForString(t, output, "gemini(auto(3-pro-preview))", 30*time.Second)
+	// The right panel should now show the auto-detected model
+	waitForString(t, output, "auto (gemini-3-pro-preview)", 30*time.Second)
 	
 	t.Log("E2E Detection Test Passed!")
 }
@@ -339,6 +346,7 @@ func TestGeminiOutputModelDetection(t *testing.T) {
 				"status":       "idle",
 				"created_at":   time.Now(),
 				"tmux_session": tmuxSessionName,
+				"gemini_session_id": sessionID,
 				"gemini_model": "gemini-1.5-pro",
 			},
 		},
@@ -400,9 +408,11 @@ func TestGeminiOutputModelDetection(t *testing.T) {
 	f.Write([]byte("j")) // Move down from Group to Session
 	time.Sleep(1 * time.Second)
 
-	// 3. Verify initial tag
-	t.Log("Verifying initial tag...")
-	waitForString(t, output, "gemini(1.5-pro)", 20*time.Second)
+	// 3. Verify initial state
+	t.Log("Verifying initial state...")
+	waitForString(t, output, "gemini", 20*time.Second)
+	// Right panel should show the model
+	waitForString(t, output, "gemini-1.5-pro", 10*time.Second)
 
 	// 4. Simulate Gemini outputting a model name in tmux
 	t.Log("Simulating Gemini output in tmux...")
@@ -423,11 +433,9 @@ func TestGeminiOutputModelDetection(t *testing.T) {
 	// Simpler: kill sleep and start a new command that echoes and then sleeps.
 	exec.Command("tmux", "respawn-pane", "-t", tmuxSessionName, "-k", "echo 'Now using gemini-2.0-flash'; sleep 100").Run()
 
-	// 5. Verify UI updates to gemini(2.0-flash)
-	// Wait, since GeminiModel is gemini-1.5-pro and detected is gemini-2.0-flash
-	// FormatGeminiModelLabel("gemini-1.5-pro", "gemini-2.0-flash") -> "2.0-flash"
+	// 5. Verify UI updates right panel to gemini-2.0-flash (detection overwrites selection)
 	t.Log("Waiting for output-based model detection...")
-	waitForString(t, output, "gemini(2.0-flash)", 30*time.Second)
+	waitForString(t, output, "gemini-2.0-flash", 30*time.Second)
 	
 	t.Log("E2E Output Detection Test Passed!")
 }
