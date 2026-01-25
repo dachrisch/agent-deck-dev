@@ -37,7 +37,7 @@ This plan outlines the steps to refactor the Gemini session management logic and
     - [x] Run full E2E suite (`tests/e2e`) to ensure no regressions in dynamic labeling or status detection.
 - [x] Task: Conductor - User Manual Verification 'Phase 2: UpdateGeminiSession Refactoring' (Protocol in workflow.md)
 
-## Phase 3: Final Verification & Cleanup
+## Phase 3: Final Verification & Cleanup [checkpoint: 782dfb5]
 
 - [x] Task: Code style and documentation audit
     - [ ] Ensure all new standalone functions are documented.
