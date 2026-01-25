@@ -30,7 +30,7 @@ This plan outlines the implementation of user-controlled maintenance settings an
 
 ## Phase 3: Final Integration & E2E
 
-- [ ] Task: Final E2E Verification
+- [x] Task: Final E2E Verification (8376713, 642d59a)
     - [ ] Create an E2E test in `tests/e2e` that enables maintenance, mocks a run, and verifies the UI message appears.
     - [ ] Verify that maintenance remains disabled by default on a fresh run.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Final Integration & E2E' (Protocol in workflow.md)
