@@ -15,7 +15,7 @@ This plan outlines the implementation of user-controlled maintenance settings an
     - [ ] Write unit tests verifying the worker stays idle when disabled.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Configuration & Backend Control' (Protocol in workflow.md)
 
-## Phase 2: TUI Settings & Feedback
+## Phase 2: TUI Settings & Feedback [checkpoint: 97720e5]
 
 - [x] Task: TDD - Add Settings UI Toggle (3f6997e)
     - [ ] Add "Maintenance" toggle to `internal/ui/settings_panel.go`.
