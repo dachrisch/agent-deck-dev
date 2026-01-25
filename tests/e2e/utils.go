@@ -1,8 +1,11 @@
 package e2e
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"fmt"
 	"io"
+	"os"
 	"os/exec"
 	"path/filepath"
 	"regexp"
@@ -10,8 +13,6 @@ import (
 	"strings"
 	"testing"
 	"time"
-	"crypto/sha256"
-	"encoding/hex"
 )
 
 // waitForString waits for a string to appear in the output channel.
@@ -109,7 +110,16 @@ func BuildBinary() (string, error) {
 
 	root := filepath.Join(filepath.Dir(filename), "..", "..")
 	submodulePath := filepath.Join(root, "agent-deck", "cmd", "agent-deck")
-	binaryPath := filepath.Join(filepath.Dir(filename), "agent-deck-test-bin")
+	
+	// Use a path in the same directory as the test file to avoid /tmp space issues
+	binaryPath := filepath.Join(filepath.Dir(filename), "agent-deck")
+
+	// Check if binary already exists and was built recently (within 5 minutes)
+	if info, err := os.Stat(binaryPath); err == nil {
+		if time.Since(info.ModTime()) < 5*time.Minute {
+			return binaryPath, nil
+		}
+	}
 
 	cmd := exec.Command("go", "build", "-o", binaryPath, ".")
 	cmd.Dir = submodulePath
