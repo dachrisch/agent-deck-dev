@@ -2,7 +2,7 @@
 
 This plan outlines the implementation of user-controlled maintenance settings and visual feedback within the Agent Deck TUI.
 
-## Phase 1: Configuration & Backend Control
+## Phase 1: Configuration & Backend Control [checkpoint: 9e6d9c9]
 
 - [x] Task: TDD - Implement Maintenance Configuration (4f4c275)
     - [ ] Add `MaintenanceSettings` struct to `internal/session/userconfig.go`.
