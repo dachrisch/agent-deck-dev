@@ -4,13 +4,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Active Tracks
 
-- [x] **Track: Implement high-priority backend performance optimizations (tmux subprocess caching and LogWatcher rate limiting).**
-*Link: [./tracks/backend_perf_optimizations_20260126/](./tracks/backend_perf_optimizations_20260126/)*
-
 ---
 
 ## Archived Tracks
 
+- [x] **Track: Implement high-priority backend performance optimizations (tmux subprocess caching and LogWatcher rate limiting).** (Archived: 2026-01-27)
 - [x] **Track: make maintenance an option in agentdeck (defaultz false) and add visual indicator when it ran** (Archived: 2026-01-25)
 - [x] **Track: implement automated Gemini log pruning and session archiving** (Archived: 2026-01-25)
 - [x] **Track: refactor UpdateGeminiSession and consolidate findNewestFile into utils.go** (Archived: 2026-01-25)
