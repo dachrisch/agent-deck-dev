@@ -4,15 +4,15 @@ This plan outlines the implementation of high-priority backend performance optim
 
 ## Phase 1: tmux Subprocess Caching
 
-- [ ] Task: TDD - Implement Cache Infrastructure in tmux.Session
-    - [ ] Add `cacheContent`, `cacheTime`, and `cacheMu` fields to the `Session` struct in `internal/tmux/tmux.go`.
-    - [ ] Create unit tests in `internal/tmux/tmux_test.go` to verify cache set/get/expiry logic.
-- [ ] Task: TDD - Integrate Cache into CapturePane
-    - [ ] Modify `CapturePane()` to check the cache and respect the 500ms TTL.
-    - [ ] Write unit tests to verify that `CapturePane()` only calls the system command when the cache is stale or empty.
-- [ ] Task: TDD - Implement Cache Invalidation
-    - [ ] Update `SendKeys()` and `Start()` to invalidate the cache.
-    - [ ] Write unit tests to verify immediate invalidation after interactive actions.
+- [x] Task: TDD - Implement Cache Infrastructure in tmux.Session (60d63cb)
+    - [x] Add `cacheContent`, `cacheTime`, and `cacheMu` fields to the `Session` struct in `internal/tmux/tmux.go`.
+    - [x] Create unit tests in `internal/tmux/tmux_test.go` to verify cache set/get/expiry logic.
+- [x] Task: TDD - Integrate Cache into CapturePane (60d63cb)
+    - [x] Modify `CapturePane()` to check the cache and respect the 500ms TTL.
+    - [x] Write unit tests to verify that `CapturePane()` only calls the system command when the cache is stale or empty.
+- [x] Task: TDD - Implement Cache Invalidation (60d63cb)
+    - [x] Update `SendKeys()` and `Start()` to invalidate the cache.
+    - [x] Write unit tests to verify immediate invalidation after interactive actions.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: tmux Subprocess Caching' (Protocol in workflow.md)
 
 ## Phase 2: LogWatcher Rate Limiting
