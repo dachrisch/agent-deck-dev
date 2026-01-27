@@ -4,6 +4,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ## Active Tracks
 
+- [ ] **Track: Implement high-priority backend performance optimizations (tmux subprocess caching and LogWatcher rate limiting).**
+*Link: [./tracks/backend_perf_optimizations_20260126/](./tracks/backend_perf_optimizations_20260126/)*
+
 ---
 
 ## Archived Tracks
