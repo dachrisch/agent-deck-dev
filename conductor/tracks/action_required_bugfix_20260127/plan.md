@@ -18,6 +18,9 @@ This plan outlines the steps to enhance Claude Code's status detection to correc
     - [x] Implement `renderQuittingSplash` function.
     - [x] Update `View` to show quitting splash when `isQuitting` is true.
     - [x] Update quit flow (`tryQuit`, `performQuit`, `Update`) to handle delayed shutdown with visual feedback.
+- [x] Task: Optimize Application Shutdown
+    - [x] Parallelize MCP socket proxy stopping in `Pool.Shutdown()`.
+    - [x] Ensure all watchers (`LogWatcher`, `StorageWatcher`) have idempotent `Close()` methods to prevent panics.
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Test-Driven Development' (Protocol in workflow.md) (6a84afb)
 
 ## Phase 2: Final Verification & Quality Gates [checkpoint: 6a84afb]
