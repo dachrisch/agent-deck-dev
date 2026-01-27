@@ -13,6 +13,11 @@ This plan outlines the steps to enhance Claude Code's status detection to correc
 - [x] Task: Fix Goroutine Leak in LogWatcher Callback (6a84afb)
     - [x] Implement worker pool (`logUpdateChan`, `logWorker`) in `internal/ui/home.go`.
     - [x] Replace unbounded goroutine spawning with bounded worker pool.
+- [x] Task: Implement Quitting Splash Screen
+    - [x] Add `isQuitting` field to `Home` struct.
+    - [x] Implement `renderQuittingSplash` function.
+    - [x] Update `View` to show quitting splash when `isQuitting` is true.
+    - [x] Update quit flow (`tryQuit`, `performQuit`, `Update`) to handle delayed shutdown with visual feedback.
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Test-Driven Development' (Protocol in workflow.md) (6a84afb)
 
 ## Phase 2: Final Verification & Quality Gates [checkpoint: 6a84afb]
