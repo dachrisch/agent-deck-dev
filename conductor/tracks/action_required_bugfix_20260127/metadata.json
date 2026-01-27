@@ -1,0 +1,8 @@
+{
+  "track_id": "action_required_bugfix_20260127",
+  "type": "bugfix",
+  "status": "new",
+  "created_at": "2026-01-27T10:00:00Z",
+  "updated_at": "2026-01-27T10:00:00Z",
+  "description": "Fix bug where Claude 'Action Required' dialogs are incorrectly identified as 'running' instead of 'waiting'."
+}
