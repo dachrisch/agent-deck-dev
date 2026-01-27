@@ -2,7 +2,7 @@
 
 This plan outlines the implementation of high-priority backend performance optimizations, specifically tmux subprocess caching and LogWatcher rate limiting.
 
-## Phase 1: tmux Subprocess Caching
+## Phase 1: tmux Subprocess Caching [checkpoint: a7c6b98]
 
 - [x] Task: TDD - Implement Cache Infrastructure in tmux.Session (60d63cb)
     - [x] Add `cacheContent`, `cacheTime`, and `cacheMu` fields to the `Session` struct in `internal/tmux/tmux.go`.
@@ -17,12 +17,12 @@ This plan outlines the implementation of high-priority backend performance optim
 
 ## Phase 2: LogWatcher Rate Limiting
 
-- [ ] Task: TDD - Implement Token Bucket Rate Limiter
-    - [ ] Create a standalone `RateLimiter` utility or integrate directly into the monitoring loop.
-    - [ ] Write unit tests to verify the 20 events/second limit and event coalescing.
-- [ ] Task: TDD - Integrate Rate Limiter into LogWatcher
-    - [ ] Modify the log monitoring loop to use the rate limiter before triggering UI updates.
-    - [ ] Write unit tests simulating high-frequency log writes to verify backend shielding.
+- [x] Task: TDD - Implement Token Bucket Rate Limiter (a20c92b)
+    - [x] Create a standalone `RateLimiter` utility or integrate directly into the monitoring loop.
+    - [x] Write unit tests to verify the 20 events/second limit and event coalescing.
+- [x] Task: TDD - Integrate Rate Limiter into LogWatcher (e6a129f)
+    - [x] Modify the log monitoring loop to use the rate limiter before triggering UI updates.
+    - [x] Write unit tests simulating high-frequency log writes to verify backend shielding.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: LogWatcher Rate Limiting' (Protocol in workflow.md)
 
 ## Phase 3: Final Verification & Quality Gates
