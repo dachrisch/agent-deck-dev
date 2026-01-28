@@ -7,13 +7,11 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Fix bug where Claude 'Action Required' dialogs are incorrectly identified as 'running' instead of 'waiting'.**
 *Link: [./tracks/action_required_bugfix_20260127/](./tracks/action_required_bugfix_20260127/)*
 
-- [x] **Track: Update Hardcoded Gemini Model List**
-*Link: [./tracks/gemini_model_update_20260128/](./tracks/gemini_model_update_20260128/)*
-
 ---
 
 ## Archived Tracks
 
+- [x] **Track: Update Hardcoded Gemini Model List** (Archived: 2026-01-28)
 - [x] **Track: Project Path Autocomplete in New Session Dialog** (Archived: 2026-01-28)
 - [x] **Track: Implement high-priority backend performance optimizations (tmux subprocess caching and LogWatcher rate limiting).** (Archived: 2026-01-27)
 - [x] **Track: make maintenance an option in agentdeck (defaultz false) and add visual indicator when it ran** (Archived: 2026-01-25)
