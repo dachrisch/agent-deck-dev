@@ -1,0 +1,8 @@
+{
+  "track_id": "path_autocomplete_20260127",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-01-27T10:00:00Z",
+  "updated_at": "2026-01-27T10:00:00Z",
+  "description": "Add standard shell-like path autocomplete to the 'Project Path' input field in the 'New Session' dialog."
+}
