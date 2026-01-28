@@ -7,6 +7,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Fix bug where Claude 'Action Required' dialogs are incorrectly identified as 'running' instead of 'waiting'.**
 *Link: [./tracks/action_required_bugfix_20260127/](./tracks/action_required_bugfix_20260127/)*
 
+- [ ] **Track: Update Hardcoded Gemini Model List**
+*Link: [./tracks/gemini_model_update_20260128/](./tracks/gemini_model_update_20260128/)*
+
 ---
 
 ## Archived Tracks
