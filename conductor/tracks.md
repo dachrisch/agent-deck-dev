@@ -7,7 +7,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Fix bug where Claude 'Action Required' dialogs are incorrectly identified as 'running' instead of 'waiting'.**
 *Link: [./tracks/action_required_bugfix_20260127/](./tracks/action_required_bugfix_20260127/)*
 
-- [ ] **Track: Project Path Autocomplete in New Session Dialog**
+- [x] **Track: Project Path Autocomplete in New Session Dialog**
 *Link: [./tracks/path_autocomplete_20260127/](./tracks/path_autocomplete_20260127/)*
 
 ---
